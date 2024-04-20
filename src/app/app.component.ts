@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { initFlowbite } from 'flowbite';
-import { LoginComponent } from './login/login.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  templateUrl: './login/login.component.html',
-  styleUrls: ['./app.component.css']
+  imports: [RouterOutlet],
+  templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
   title = 'tapcash';
