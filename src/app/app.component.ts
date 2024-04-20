@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { OnInit } from '@angular/core';
-import { initFlowbite } from 'flowbite';
+// import { OnInit } from '@angular/core';
+// import { initFlowbite } from 'flowbite';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -9,10 +9,12 @@ import { RouterOutlet } from '@angular/router';
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
 })
-export class AppComponent implements OnInit {
-  title = 'tapcash';
+// export class AppComponent implements OnInit {
+//   title = 'tapcash';
 
-  ngOnInit(): void {
-    initFlowbite();
-  }
-}
+//   ngOnInit(): void {
+//     initFlowbite();
+//   }
+// }
+
+export class AppComponent{}
