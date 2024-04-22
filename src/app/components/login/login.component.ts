@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'login',
@@ -122,9 +123,21 @@ export class LoginComponent {
   ];
   currentYear = new Date().getFullYear();
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private router: Router) {}
 
   async handleSubmit() {
-    console.log(this.loginForm.value);
+    const { username, password } = this.loginForm.value;
+    console.log(this.loginForm.value);  // For debugging, shows the form values
+
+    // Simulated credential check
+    if (username === 'admin' && password === 'admin') {
+      this.router.navigate(['/dashboard']);  // Navigate to the dashboard on success
+    } else {
+      alert('Invalid credentials');  // Show an error message
+    }
   }
+
+  // async handleSubmit() {
+  //   console.log(this.loginForm.value);
+  // }
 }
